@@ -714,5 +714,23 @@
       "prompt": "content"
     },
     "folder": "python"
+  },
+  "acereason_random_15k": {
+    "file_name": "acereason_random_15k.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "system": "system"
+    }
+  },
+  "acereason_advanced_15k": {
+    "file_name": "acereason_advanced_15k.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "system": "system"
+    }
   }
 }

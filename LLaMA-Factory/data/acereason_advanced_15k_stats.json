@@ -1,0 +1,18 @@
+{
+  "seed": 42,
+  "source_examples": 100000,
+  "after_quality_filter": 100000,
+  "after_length_filter": 88000,
+  "target_examples": 15000,
+  "num_clusters": 200,
+  "tfidf_max_features": 20000,
+  "tfidf_ngram_range": [
+    1,
+    2
+  ],
+  "low_output_length_percentile": 10,
+  "high_output_length_percentile": 98,
+  "low_output_length_cutoff": 6185.9000000000015,
+  "high_output_length_cutoff": 56479.04000000001,
+  "selection_strategy": "Quality filtering + output-length difficulty filtering + TF-IDF MiniBatchKMeans diversity clustering + balanced cluster sampling favoring longer reasoning outputs."
+}

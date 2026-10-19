@@ -2,3 +2,15 @@ __pycache__/
 *.pyc
 eval/outputs/
 eval/completions/
+
+# Project-generated artifacts
+LLaMA-Factory/saves/
+LLaMA-Factory/*.out
+LLaMA-Factory/data/acereason_random_15k.json
+LLaMA-Factory/data/acereason_advanced_15k.json
+data_download/
+
+# Python / system junk
+__pycache__/
+*.pyc
+.DS_Store
