@@ -14,3 +14,4 @@ data_download/
 __pycache__/
 *.pyc
 .DS_Store
+LLaMA-Factory/gpu_test.sh
