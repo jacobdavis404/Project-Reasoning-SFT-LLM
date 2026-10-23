@@ -13,7 +13,7 @@ All models are evaluated using the same leaderboard settings:
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | Base Qwen2.5-3B-Instruct | — | — | — | — | — | — | — | — |
 | Random 15K SFT | — | — | — | — | — | — | — | — |
-| Advanced / Curated 15K SFT | 0.50 | 0.403 | 0.646 | 0.265 | 0.284 | 0.129 | 0.273 | 0.217 |
+| Advanced / Curated 15K SFT | 0.050 | 0.403 | 0.646 | 0.265 | 0.284 | 0.129 | 0.273 | 0.217 |
 
 ### Average Performance
 
