@@ -28,12 +28,14 @@ All models are evaluated using the same leaderboard settings:
 
 ### Datasets
 - Random 15K: https://huggingface.co/datasets/jacobdavis404/AceReason-Random-15K
-- Advanced / Curated 15K: [add link here]
+- Advanced 15K: [add link here]
+- Curated 15K: https://huggingface.co/datasets/enriquemaldo/acereason-hybrid15k
 
 ### Models
 - Base model: https://huggingface.co/Qwen/Qwen2.5-3B-Instruct
 - Random 15K SFT: https://huggingface.co/jacobdavis404/Qwen2.5-3B-Instruct-Random15K-SFT
-- Advanced / Curated 15K SFT: [add link here]
+- Advanced 15K SFT: [add link here]
+- Curated 15k SFT: https://huggingface.co/enriquemaldo/qwen25-3b-hybrid15k-3ep
 
 
 
