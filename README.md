@@ -1,3 +1,38 @@
+## Evaluation Results Group 6
+
+All models are evaluated using the same leaderboard settings:
+
+- Temperature: `0.6`
+- Top-p: `0.95`
+- Samples per problem: `8`
+- Reported metric: `Pass@1`
+- Maximum generation length: `32768`
+- System prompt: `Please reason step by step, and put your final answer within \boxed{}.`
+
+| Model | AIME 2024 | AMC 2023 | MATH-500 | Minerva Math | OlympiadBench | CN Math 2024 | Kaoyan | GPQA-Diamond |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Base Qwen2.5-3B-Instruct | — | — | — | — | — | — | — | — |
+| Random 15K SFT | — | — | — | — | — | — | — | — |
+| Advanced / Curated 15K SFT | — | — | — | — | — | — | — | — |
+
+### Average Performance
+
+| Model | Mean Pass@1 |
+|---|---:|
+| Base Qwen2.5-3B-Instruct | — |
+| Random 15K SFT | — |
+| Advanced / Curated 15K SFT | — |
+
+
+
+
+
+
+
+
+
+
+
 # Assignment-Reasoning-SFT-LLM
 SFT Training LLM for Improved Reasoning
 
