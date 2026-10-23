@@ -732,5 +732,14 @@
       "response": "output",
       "system": "system"
     }
+  },
+  "acereason_hybrid_15k": {
+    "file_name": "acereason_hybrid_15k.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "system": "system"
+    }
   }
 }

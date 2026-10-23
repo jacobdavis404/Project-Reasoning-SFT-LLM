@@ -16,3 +16,6 @@ __pycache__/
 .DS_Store
 LLaMA-Factory/gpu_test.sh
 LLaMA-Factory/gpu_test.sh
+LLaMA-Factory/data/acereason_hybrid_15k.json
+LLaMA-Factory/logs/
+eval/outputs_*/
