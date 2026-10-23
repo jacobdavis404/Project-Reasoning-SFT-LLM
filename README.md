@@ -534,3 +534,8 @@ Evaluation Setup:
 |     12   |     8    |  forgottenlight4415/Qwen-2.5-3B-Instruct-SFT-15K-Diverse    |   0.300   |  0.133  |  0.852  |    0.300   |   0.608  |     0.700   |     0.324     |   0.498 |     0.556    |  0.445 |
 |     13   |     11    |  jhjeong99/Qwen2.5-3B-Intstruct_Limopro   |   0.133   |  0.033  |  0.774  |    0.167   |   0.437  |     0.575   |     0.335     |   0.397 |     0.707    | 0.379 |
 |     14   |     9    |  cuong1692001/Qwen2.5-3B-Instruct_15K_Selective    |   0.067   |  0.100  |  0.756  |    0.100   |   0.412  |     0.450   |     0.261     |   0.366 |     0.530    |  0.317 |
+
+---
+## Curated (hybrid) 15K run
+Model: https://huggingface.co/enriquemaldo/qwen25-3b-hybrid15k-3ep - data: https://huggingface.co/datasets/enriquemaldo/acereason-hybrid15k
+Pass@8 AVG 0.590 vs 0.569 for the base model. Pipeline, configs and full results: [`results/hybrid_15k/README.md`](results/hybrid_15k/README.md); how to reproduce: [`STEPS.md`](STEPS.md).
