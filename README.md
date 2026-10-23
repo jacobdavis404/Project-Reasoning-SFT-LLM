@@ -13,7 +13,7 @@ All models are evaluated using the same leaderboard settings:
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | Base Qwen2.5-3B-Instruct | — | — | — | — | — | — | — | — |
 | Random 15K SFT | — | — | — | — | — | — | — | — |
-| Advanced / Curated 15K SFT | — | — | — | — | — | — | — | — |
+| Advanced / Curated 15K SFT | 0.50 | 0.403 | 0.646 | 0.265 | 0.284 | 0.129 | 0.273 | 0.217 |
 
 ### Average Performance
 
@@ -21,21 +21,19 @@ All models are evaluated using the same leaderboard settings:
 |---|---:|
 | Base Qwen2.5-3B-Instruct | — |
 | Random 15K SFT | — |
-| Advanced / Curated 15K SFT | — |
+| Advanced / Curated 15K SFT | 0.283 |
 
 
 ## Hugging Face Artifacts
 
 ### Datasets
 - Random 15K: https://huggingface.co/datasets/jacobdavis404/AceReason-Random-15K
-- Advanced 15K: [add link here]
-- Curated 15K: https://huggingface.co/datasets/enriquemaldo/acereason-hybrid15k
+- Advanced / Curated 15K: https://huggingface.co/datasets/enriquemaldo/acereason-hybrid15k
 
 ### Models
 - Base model: https://huggingface.co/Qwen/Qwen2.5-3B-Instruct
 - Random 15K SFT: https://huggingface.co/jacobdavis404/Qwen2.5-3B-Instruct-Random15K-SFT
-- Advanced 15K SFT: [add link here]
-- Curated 15k SFT: https://huggingface.co/enriquemaldo/qwen25-3b-hybrid15k-3ep
+- Advanced / Curated 15k SFT: https://huggingface.co/enriquemaldo/qwen25-3b-hybrid15k-3ep
 
 
 
