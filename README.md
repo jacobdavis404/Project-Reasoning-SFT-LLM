@@ -24,7 +24,16 @@ All models are evaluated using the same leaderboard settings:
 | Advanced / Curated 15K SFT | — |
 
 
+## Hugging Face Artifacts
 
+### Datasets
+- Random 15K: https://huggingface.co/datasets/jacobdavis404/AceReason-Random-15K
+- Advanced / Curated 15K: [add link here]
+
+### Models
+- Base model: https://huggingface.co/Qwen/Qwen2.5-3B-Instruct
+- Random 15K SFT: https://huggingface.co/jacobdavis404/Qwen2.5-3B-Instruct-Random15K-SFT
+- Advanced / Curated 15K SFT: [add link here]
 
 
 
