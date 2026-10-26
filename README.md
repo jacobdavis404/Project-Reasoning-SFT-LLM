@@ -11,7 +11,7 @@ All models are evaluated using the same leaderboard settings:
 
 | Model | AIME 2024 | AMC 2023 | MATH-500 | Minerva Math | OlympiadBench | CN Math 2024 | Kaoyan | GPQA-Diamond |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Base Qwen2.5-3B-Instruct | — | — | — | — | — | — | — | — |
+| Base Qwen2.5-3B-Instruct | 0.062 | 0.419 | 0.650 | 0.308 | 0.281 | 0.108 | 0.225 | 0.301 |
 | Random 15K SFT | — | 0.3531 | — | — | — | — | — | — |
 | Advanced / Curated 15K SFT | 0.050 | 0.403 | 0.646 | 0.265 | 0.284 | 0.129 | 0.273 | 0.217 |
 
@@ -19,7 +19,7 @@ All models are evaluated using the same leaderboard settings:
 
 | Model | Mean Pass@1 |
 |---|---:|
-| Base Qwen2.5-3B-Instruct | — |
+| Base Qwen2.5-3B-Instruct | 0.294 |
 | Random 15K SFT | — |
 | Advanced / Curated 15K SFT | 0.283 |
 
