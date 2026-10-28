@@ -1,3 +1,4 @@
+from pathlib import Path
 import json
 from transformers import AutoTokenizer
 from vllm import LLM, SamplingParams
@@ -131,6 +132,11 @@ def infer(args):
         envs.VLLM_HOST_IP="0.0.0.0" or "127.0.0.1"
     print(f"available_gpus: {available_gpus}")
     tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, trust_remote_code=True)
+
+    if tokenizer.chat_template is None:
+        template_path = Path(model_name_or_path) / "chat_template.jinja"
+        if template_path.exists():
+            tokenizer.chat_template = template_path.read_text()
     prompt_batch = []
     for example in tqdm(examples, total=len(examples)):
         # parse question and answer
@@ -153,8 +159,10 @@ def infer(args):
     llm = LLM(model=model_name_or_path, 
               tensor_parallel_size=len(available_gpus), 
               trust_remote_code=True, 
-            #   swap_space=60,
+                swap_space=60,
               gpu_memory_utilization=args.gpu_memory_utilization,
+          max_num_seqs=8,
+          enforce_eager=True,
               )
     
     file_outputs = []
