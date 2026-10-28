@@ -113,15 +113,12 @@ All models are evaluated using the following settings:
 
 ## Preliminary Results
 
-The currently available results show that fine-tuning does not uniformly improve performance across every benchmark.
-
 The Advanced / Curated model performs better than the base model on some benchmarks, including CN Math 2024 and Kaoyan, while performing below the base model on several others.
 
 The Advanced / Curated model currently has a mean Pass@1 of `0.283`, compared with `0.294` for the base model.
 
 This suggests that the effects of supervised fine-tuning are benchmark-dependent and that selecting higher-quality or more diverse examples does not necessarily guarantee an improvement in aggregate reasoning performance.
 
-A complete comparison between the Random 15K and Advanced / Curated 15K strategies will be added after the remaining Random 15K evaluations finish.
 
 ---
 
