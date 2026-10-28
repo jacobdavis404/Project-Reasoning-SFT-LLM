@@ -19,3 +19,9 @@ LLaMA-Factory/gpu_test.sh
 LLaMA-Factory/data/acereason_hybrid_15k.json
 LLaMA-Factory/logs/
 eval/outputs_*/
+
+# Local evaluation artifacts
+eval/*.out
+eval/eval.py.bak
+eval/eval.py.before_stability_fix
+eval/outputs_random15k*/
