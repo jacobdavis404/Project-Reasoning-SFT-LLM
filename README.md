@@ -29,13 +29,23 @@ This dataset serves as the baseline for measuring whether a more deliberate data
 
 The Advanced / Curated dataset contains 15,000 examples selected from the same AceReason-1.1-SFT 100K source dataset.
 
-Unlike the Random 15K baseline, the curated dataset uses a deliberate selection strategy intended to prioritize stronger and more diverse reasoning examples.
+Our motivation was that a purely random subset may contain redundant examples or overrepresent certain types of reasoning problems. We hypothesized that a more deliberate selection process could make better use of the limited 15,000-example training budget by preserving topic diversity while also including examples with a range of reasoning difficulty.
 
-Using the same number of examples in both datasets allows the evaluation to focus on the effect of **data selection strategy** rather than differences in training-set size.
+The selection strategy used three main steps:
+
+Duplicate or highly redundant examples were removed.
+
+Similar questions were grouped using K-means clustering, and examples were sampled proportionally across clusters to preserve the general distribution of question types in the source dataset.
+
+Solution token length was used as an approximate measure of reasoning difficulty. Examples with different solution lengths were sampled within the clusters to include a broader range of reasoning complexity.
+
+Solution length is not a perfect measure of difficulty, but it provides a practical proxy for distinguishing shorter and longer reasoning processes.
+
+Using the same number of examples for the Random and Advanced datasets allows the comparison to focus on the effect of data-selection strategy rather than training-set size.
 
 The final Group 6 curated dataset is published on Hugging Face as:
 
-`enriquemaldo/acereason-hybrid15k`
+enriquemaldo/acereason-hybrid15k
 
 ---
 
@@ -98,7 +108,7 @@ All models are evaluated using the following settings:
 | Model                      | AIME 2024 | AMC 2023 | MATH-500 | Minerva Math | OlympiadBench | CN Math 2024 | Kaoyan | GPQA-Diamond |
 | -------------------------- | --------- | -------- | -------- | ------------ | ------------- | ------------ | ------ | ------------ |
 | Base Qwen2.5-3B-Instruct   | 0.062     | 0.419    | 0.650    | 0.308        | 0.281         | 0.108        | 0.225  | 0.301        |
-| Random 15K SFT             | 0.0917    | 0.353    | 0.648    | 0.287        | 0.283         | 0.1042       | 0.189  | 0.277        |
+| Random 15K SFT             | 0.0917    | 0.353    | 0.648    | 0.287        | 0.283         | 0.1042       | 0.189  | 0.259        |
 | Advanced / Curated 15K SFT | 0.050     | 0.403    | 0.646    | 0.265        | 0.284         | 0.129        | 0.273  | 0.217        |
 
 ### Average Performance
@@ -139,14 +149,44 @@ This suggests that the effects of supervised fine-tuning are benchmark-dependent
 
 ## Reproducibility
 
-The repository contains the scripts and configuration files used for:
+The repository contains the scripts and configuration files used for dataset preparation, fine-tuning, and evaluation.
 
-- Random dataset selection
-- Advanced / curated dataset selection
-- Fine-tuning
-- Evaluation
-- Benchmark scoring
+Key Reproducibility Settings
+
+Random dataset sampling seed: 42
+
+Evaluation seed: 0
+
+Base model: Qwen/Qwen2.5-3B-Instruct
+
+Training framework: LLaMA-Factory
+
+Training method: Full-parameter SFT
+
+Epochs: 3
+
+Learning rate: 5e-6
+
+Precision: bf16
+
+DeepSpeed: ZeRO Stage 3
+
+Evaluation temperature: 0.6
+
+Evaluation top-p: 0.95
+
+Samples per problem: 8
+
+Maximum generation length: 32768
+
+Training
+
+Training configurations and SLURM launch scripts are located under the LLaMA-Factory/ directory. The Random and Advanced models were each initialized independently from Qwen/Qwen2.5-3B-Instruct.
+
+Evaluation
+
+Evaluation scripts are located in the eval/ directory. Separate scripts are provided for the required benchmarks, including AIME, AMC, MATH-500, Minerva Math, OlympiadBench, CN Math 2024, Kaoyan, and GPQA-Diamond.
+
+The same evaluation parameters were used for the Base, Random 15K, and Advanced / Curated 15K models to ensure a consistent comparison.
 
 Large datasets and trained model weights are hosted on Hugging Face rather than committed directly to the GitHub repository.
-
-All reported model comparisons use the same evaluation configuration to ensure that the Base, Random 15K, and Advanced / Curated 15K models are evaluated consistently.
